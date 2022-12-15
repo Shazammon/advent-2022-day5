@@ -15,14 +15,29 @@ const { parse } = require('path')
 let data = fs.readFileSync('instructions.txt', 'utf-8')
 
 const stringData = data.split(/\r?\n/)
+// console.log(stringData)
+// const finalData = stringData.split(' ')
+// console.log(finalData)
 
 function newArray() {
-    for (i = 0; i < stringData.length; i++) {
-        const finalArray = stringData[i].split(' ')
+    // const stringArray = []
+    const newArray = stringData.map(str => {
+        return str.split(' ')
+    })
+    
+    for (i = 0; i < newArray.length; i++) {
+        const stringArray = newArray.map(arr => {
+            return arr.push(newArray[i][1], newArray[i][3], newArray[i][5])
+        })
     }
-    return finalArray
+    // let stringArray = newArray.map(arr => {
+    //     return arr.slice(1)
+    // })
 
-}
+    // return stringArray
+    }
+
+
 console.log(newArray())
 // const finalData = stringData.map(str => {
 //     return str[]
