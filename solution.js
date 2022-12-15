@@ -20,21 +20,26 @@ const stringData = data.split(/\r?\n/)
 // console.log(finalData)
 
 function newArray() {
-    // const stringArray = []
+    const stringArray = []
     const newArray = stringData.map(str => {
         return str.split(' ')
     })
     
-    for (i = 0; i < newArray.length; i++) {
-        const stringArray = newArray.map(arr => {
-            return arr.push(newArray[i][1], newArray[i][3], newArray[i][5])
-        })
-    }
+    const changedArray = newArray.map(arr => {
+        
+    })
+    // for (i = 0; i < newArray.length; i++) {
+    //     console.log(newArray[i])
+    //     const arrToAdd = newArray[i].map(arr => {
+    //         return arr.push(newArray[i][1], newArray[i][3], newArray[i][5])
+    //     })
+    //     stringArray.push(arrToAdd)
+    // }
     // let stringArray = newArray.map(arr => {
     //     return arr.slice(1)
     // })
 
-    // return stringArray
+    return changedArray
     }
 
 
