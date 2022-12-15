@@ -8,4 +8,17 @@ let sevenStack = ["Q", "S", "D", "J", "R", "T", "G", "H"]
 let eightStack = ["V", "F", "P"]
 let nineStack = ["J", "T", "S", "R", "D"]
 
-f
+const fs = require('fs')
+const { parse } = require('path')
+
+
+let data = fs.readFileSync('instructions.txt', 'utf-8')
+
+const stringData = data.split(/\r?\n/)
+const finalData = stringData.map(str => {
+    return str[]
+})
+
+function moveLetters() {
+
+}
